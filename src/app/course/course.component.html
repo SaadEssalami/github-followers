@@ -1,0 +1,16 @@
+<!--<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Title: {{ course.titre | uppercase }}</li>
+        <li class="list-group-item">Avis: {{ course.avis }}</li>
+        <li class="list-group-item">Participants: {{ course.participants }}</li>
+        <li class="list-group-item">prix: {{ course.prix | currency }}</li>
+        <li class="list-group-item">Publication: {{ course.publication | date : 'shortDate'}}</li>
+    </ul>
+</div>-->
+<!--<button class="btn btn-success" (click)="maBtn()">Ajouter</button>-->
+<button class="btn btn-secondary" (click)="loadCourse()">Load</button>
+<ul *ngFor="let course of courses ; index as i ; last as isEven ; trackBy : trackCourses">
+    <li><span *ngIf="isEven">Even-</span> {{course.id}} {{course.title}} {{i}} </li>
+    <button class="btn btn-info" (click)="edit(course)">Edit</button>
+    <button class="btn btn-danger" (click)="remove(course)">Delete</button>
+</ul>

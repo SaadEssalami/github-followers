@@ -1,0 +1,13 @@
+<span class="glyphicon"
+ [ngClass]="{
+    'glyphicon-star' :   isSelected ,
+    'glyphicon-star-empty' : !  isSelected
+ }"
+ [ngStyle]="{
+   'color' : isSelected ? 'green' : 'blue',
+   'font-size' : isSelected ? '60px' : '70px'
+   }"
+ (click)="myFavorite()">
+</span>
+
+<!--<p>{{ personne.adresse?.ville }}</p>-->
